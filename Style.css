@@ -1,0 +1,31 @@
+h1{
+    color: brown;
+    display: flex;
+    justify-content: center;
+    padding: 100px 10px;
+}
+div{
+    text-align: center;
+}
+button{
+    width: 200px;
+    height: 50px;
+    color: #FFA500;
+    background-color: #B22222;
+    text-align: center;
+    line-height: 50px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-bottom: 100px;
+}
+button:hover{
+    background-color:#FFA500;
+    color:#B22222;}
+p{
+    font-size: 18px;
+    color: blueviolet;
+    text-align: center;
+    padding: 0px 30px;
+}
