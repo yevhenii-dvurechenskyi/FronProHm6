@@ -4,16 +4,26 @@ function main(num){
     num = +num;
     let numHonestyTest = honestyTest(num);
     let numPrimeNumberTest = primeNumberTest(num);
+    let numberPireOrEven = primeOrEven(num);
+    let primeNumber;
+    let evenNumber;
+    if(numberPireOrEven){
+        evenNumber = "even";
+     }
+    else{
+        primeNumber = "prime";
+    }
     if(numHonestyTest === false){
         alert(`Invalid value (${num}) !!!`);
-        breake;
+        return;
     }
     if(numPrimeNumberTest === false){
-        alert(`Number is not simple!`);
-        //error with breake(Uncaught ReferenceError: breake is not defined), i dont know why, but the program works well
-        breake;
+        alert(`Number is not simple but ${evenNumber}!`);
+        return;
     }
-    alert(`Your number: ${num} is simple!`);
+    else{
+        alert(`Your number: ${num} is simple and ${primeNumber}!`);
+    }
 } 
 
 //check number
@@ -26,7 +36,7 @@ function honestyTest(num){
         return  true;
     }
 }
-////check prime number
+//check prime number
 
 function primeNumberTest(num){
     if(num <= 2 || Number.isInteger(num) === false){
@@ -46,4 +56,14 @@ function primeNumberTest(num){
         }
     }
     
+}
+// check is prime or is even
+
+function primeOrEven(num){
+    if(num % 2 === 0){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
